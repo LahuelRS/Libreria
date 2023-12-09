@@ -1,0 +1,2 @@
+Título del libro,Apellido del autor,Ruta de la imagen de la tapa,Ruta de la imagen de la contratapa,Código ISBN,Precio
+
