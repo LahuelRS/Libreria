@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-	fetch("books-list.csv")
+	fetch("books-list.csv") 
 		.then((response) => response.text())
 		.then((data) => {
 			const libros = data.split("\n");
@@ -8,22 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
 				const [titulo, autor, tapa, contratapa, isbn, precio] =
 					libro.split(",");
 
-				const card = document.createElement("div");
+				const card = document.createElement("div"); //2
 				card.classList.add("card");
 
 				const coverContainer = document.createElement("div");
 				coverContainer.classList.add("cover-images");
 
+				const tapaMiniSrc = tapa.replace(/(\.[^.]+)$/, "-mini$1");
 				const imagenTapa = document.createElement("img");
-				imagenTapa.src = tapa;
+				imagenTapa.src = tapaMiniSrc;
 				imagenTapa.alt = titulo;
 				imagenTapa.addEventListener("click", function () {
 					window.location.href = tapa;
 				});
 				coverContainer.appendChild(imagenTapa);
 
+				const contratapaMiniSrc = contratapa.replace(/(\.[^.]+)$/, "-mini$1");
 				const imagenContratapa = document.createElement("img");
-				imagenContratapa.src = contratapa;
+				imagenContratapa.src = contratapaMiniSrc;
 				imagenContratapa.alt = `${titulo} - Contratapa`;
 				imagenContratapa.addEventListener("click", function () {
 					window.location.href = contratapa;
