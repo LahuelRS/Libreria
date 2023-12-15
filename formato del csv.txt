@@ -1,2 +1,2 @@
 Título del libro,Apellido del autor,Ruta de la imagen de la tapa,Ruta de la imagen de la contratapa,Código ISBN,Precio
-
+Book's title,Author's last name,Front cover's image source,Back cover's image source,ISBN code,Price
